@@ -1,8 +1,3 @@
-import "dart:html";
-import "dart:ui";
-
-import "package:flutter/material.dart";
-
 import 'package:flutter/material.dart';
 import 'dart:math';
 
@@ -27,37 +22,27 @@ class Calculadora extends StatefulWidget {
 class _CalculadoraState extends State<Calculadora> {
   TextEditingController _controllerNumero1 = TextEditingController();
   TextEditingController _controllerNumero2 = TextEditingController();
-  String _resultado = "";
+  String _resultado = '';
 
+//método
   void _calcular(String operacao) {
     double numero1 = double.tryParse(_controllerNumero1.text) ?? 0.0;
     double numero2 = double.tryParse(_controllerNumero2.text) ?? 0.0;
     double? resultado;
 
     setState(() {
-      switch (operacao) {
-        case 'Somar':
-          resultado = numero1 + numero2;
-          break;
-        case 'Subtrair':
-          resultado = numero1 - numero2;
-          break;
-
-        case 'Multiplicar':
-          resultado = numero1 * numero2;
-          break;
-        case 'Dividir':
-          resultado = numero2 != 0 ? numero1 / numero2 : null;
-          break;
-        case 'Potencia':
-          resultado = pow(numero1, numero2) as double?;
-          break;
-        default:
-          resultado = 0.0;
+      if (operacao == "Somar") {
+        resultado = numero1 + numero2;
+      } else if (operacao == 'Sub') {
+        resultado = numero1 - numero2;
+      } else if (operacao == "Mult") {
+        resultado = numero1 * numero2;
+      } else {
+        resultado = numero2 != 0 ? numero1 / numero2 : null;
       }
-
-      _resultado =
-          resultado != null ? 'Resultado: $resultado' : 'Erro na operação';
+      _resultado = resultado != null
+          ? 'O Resultado é $resultado'
+          : "Operação Incorreta!";
     });
   }
 
@@ -84,26 +69,25 @@ class _CalculadoraState extends State<Calculadora> {
               keyboardType: TextInputType.number,
               decoration: InputDecoration(labelText: 'Número 2'),
             ),
-            SizedBox(height: 16.0),
+            SizedBox(height: 10.0),
             ElevatedButton(
               onPressed: () => _calcular('Somar'),
               child: Text('Somar'),
             ),
+            SizedBox(height: 10.0),
             ElevatedButton(
-              onPressed: () => _calcular('Subtrair'),
+              onPressed: () => _calcular('Sub'),
               child: Text('Subtrair'),
             ),
+            SizedBox(height: 10.0),
             ElevatedButton(
-              onPressed: () => _calcular('Multiplicar'),
+              onPressed: () => _calcular('Mult'),
               child: Text('Multiplicar'),
             ),
+            SizedBox(height: 10.0),
             ElevatedButton(
-              onPressed: () => _calcular('Dividir'),
+              onPressed: () => _calcular('Div'),
               child: Text('Dividir'),
-            ),
-            ElevatedButton(
-              onPressed: () => _calcular('Potencia'),
-              child: Text('Potência'),
             ),
             SizedBox(height: 16.0),
             Text(_resultado,

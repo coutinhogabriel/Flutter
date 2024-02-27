@@ -28,19 +28,10 @@ class ListaScreen extends StatelessWidget {
                 suffixIcon: IconButton(
                   onPressed: () {
                     // Chamando o método adicionarTarefa do Provider para atualizar o estado
-                    try {
-                      Provider.of<ListaController>(context, listen: false)
-                          .adicionarTarefa(_controller.text);
-                      // Limpar o campo de texto após adicionar a tarefa
-                      _controller.clear();
-                    } catch (e) {
-                      // Exibe a mensagem de erro em um Snackbar
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text(e.toString()),
-                        ),
-                      );
-                    }
+                    Provider.of<ListaController>(context, listen: false)
+                        .adicionarTarefa(_controller.text, context);
+                    // Limpar o campo de texto após adicionar a tarefa
+                    _controller.clear();
                   },
                   icon: Icon(Icons.add),
                 ),
@@ -68,16 +59,7 @@ class ListaScreen extends StatelessWidget {
                       // Exclui a tarefa ao manter pressionado
                       onLongPress: () {
                         // Chamando o método excluirTarefa do Provider para atualizar o estado
-                        try {
-                          model.excluirTarefa(index);
-                        } catch (e) {
-                          // Exibe a mensagem de erro em um Snackbar
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text(e.toString()),
-                            ),
-                          );
-                        }
+                        model.excluirTarefa(index, context);
                       },
                     );
                   },

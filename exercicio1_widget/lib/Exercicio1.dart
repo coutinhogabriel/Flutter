@@ -30,19 +30,29 @@ class MyApp extends StatelessWidget {
               Container(
                 color: const Color.fromARGB(255, 54, 244, 95),
                 width: 100,
-                height: 100,
+                height: 50,
                 child: Center(child: Text('Container 01'),)
               ),
               Container(
                 color: Colors.blue,
                 width: 120,
-                height: 120,
+                height: 50,
               ),
               Container(
                 color: Colors.red,
                 width: 160,
-                height: 160,
-              )
+                height: 50,
+              ),
+              Container(
+                color: Colors.green,
+                width: 200,
+                height: 50,
+              ),
+              Container(
+                color: Colors.yellow,
+                width: 240,
+                height: 50,
+              ),
             ])));
   }
 }

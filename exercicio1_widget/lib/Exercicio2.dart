@@ -17,17 +17,31 @@ class MyApp extends StatelessWidget{
             children: [
             Column(
               children: [
-                Text('Texto da Primeira Coluna')
+                 Text('Texto da Primeira Coluna'),
+                  SizedBox(height: 10), // Espaçamento entre o texto e o ícone
+                  Icon(Icons.phone_android), // Ícone embaixo do texto
+                  SizedBox(height: 10), // Espaçamento entre o ícone e o texto
+                  Icon( Icons.phone_android, color: Colors.red,
+                  )
               ],
             ),
             Column(
               children: [
-                Text('Texto da Segunda Coluna')
+                Text('Texto da Segunda Coluna'),
+                SizedBox(height: 10), // Espaçamento entre o ícone e o texto
+                  Icon(Icons.e_mobiledata, color: Colors.red),
+                    SizedBox(height: 10), // Espaçamento entre o ícone e o texto
+                  Icon(Icons.abc_sharp, color: Colors.black,
+                  )
               ],
             ),
             Column(
               children: [
-                Text('Texto da Terceira Coluna')
+                Text('Texto da Terceira Coluna'),
+                SizedBox(height: 10), // Espaçamento entre o ícone e o texto
+                Icon(Icons.bluetooth, color: Colors.blue),
+                SizedBox(height: 10), // Espaçamento entre o ícone e o texto
+                Icon(Icons.radio, color: Colors.blue),
               ],
 
             ),

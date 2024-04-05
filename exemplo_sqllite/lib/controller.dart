@@ -1,17 +1,22 @@
-import 'package:exemplo_sqllite/model.dart';
+// vai ter minha classe banco de dados
+// montar a estrutura para o banco de dados (CRUD)
+// ELE É UM BANCO DE DADOS INBUTIDO
+
+import 'package:exemplo_sqllite/Model.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
 class BancoDadosCrud {
   static const String DB_NOME = 'contacts.db'; // Nome do banco de dados
-  static const String TABLE_NOME = 'contacts'; // Nome da tabela
+  static const String TABLE_NOME = 'contact'; // Nome da tabela
   static const String
       CREATE_CONTACTS_TABLE_SCRIPT = // Script SQL para criar a tabela
-      "CREATE TABLE IF NOT EXISTS contacts(id INTEGER PRIMARY KEY," +
+      "CREATE TABLE contact(id INTEGER PRIMARY KEY," +
           "nome TEXT, email TEXT, telefone TEXT," +
-          "addressLine1 TEXT)";
+          "endereco TEXT)";
 
   Future<Database> _getDatabase() async {
+    // (_) é um metodo privado (ELE VAI ESTABELECER UMA CONEXÃO E VAI RETORNAR ALGUMA COISA ASYNC)
     return openDatabase(
       join(await getDatabasesPath(), DB_NOME), // Caminho do banco de dados
       onCreate: (db, version) {

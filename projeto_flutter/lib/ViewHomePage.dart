@@ -5,7 +5,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('SQLite'),
+        title: Text('HOME'),
+        backgroundColor: Color.fromARGB(255, 90, 238, 238),
       ),
       body: Center(
         child: Text('BEM VINDO A PÁGINA INICIAL'),

@@ -10,6 +10,7 @@ class LoginView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('FAÇA SEU LOGIN'),
+        backgroundColor: Color.fromARGB(255, 181, 234, 243),
         centerTitle: true,
       ),
       body: Padding(

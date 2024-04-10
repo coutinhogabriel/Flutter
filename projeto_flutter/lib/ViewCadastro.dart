@@ -15,6 +15,7 @@ class CadastroView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(''),
+        backgroundColor: Color.fromARGB(255, 149, 52, 240),
       ),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 16.0),

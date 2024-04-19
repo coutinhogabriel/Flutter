@@ -3,8 +3,8 @@ import 'package:sa2_correcao/UserModel.dart';
 import 'package:sqflite/sqflite.dart';
 
 class BancoDadosCrud {
-  static const String DB_NOME = 'users.db'; // Nome do banco de dados
-  static const String TABLE_NOME = 'users'; // Nome da tabela
+  static const String DB_NOME = 'somativa.db'; // Nome do banco de dados
+  static const String TABLE_NOME = 'somativa'; // Nome da tabela
   static const String
       SCRIPT_CRIACAO_TABELA = // Script SQL para criar a tabela
       "CREATE TABLE IF NOT EXISTS users (id SERIAL PRIMARY KEY," +

@@ -1,0 +1,23 @@
+[
+    {
+        "titulo": "O Fim da eternidade",
+        "autor": "Isaac Asimov",
+        "sinopse": "O fim da eternidade é um livro de ficção cientifica escrito por Isaac Asimov, publicadas em 1955.",
+        "categoria": "Ficção Científica",
+        "isbn": "9788521603035"
+    },
+    {
+        "titulo": "1984",
+        "autor": "George Orwell",
+        "sinopse": "Winston, herói de 1984 , último romance de George Orwell, vive aprisionado na engrenagem totalitária de uma sociedade completamente dominada pelo Estado",
+        "categoria": "Ficção Científica",
+        "isbn": "1235489684235"
+    },
+    {
+        "titulo": "A Revolução dos Bichos",
+        "autor": "George Orwell",
+        "sinopse": "Uma fazenda é tomada por seus animais maltratados e sobrecarregados. Cheios de idealismo",
+        "categoria": "Ficção Científica",
+        "isbn": "2535489684505"
+    }
+]

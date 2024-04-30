@@ -1,8 +1,8 @@
-import 'package:exemplo_json/View/ProdutosView.dart';
+import 'package:exemplo_json2/View/lista_lirvros_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -11,11 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Exemplo Json',
+      title: 'Catálogo de livros',
       theme: ThemeData(
-        primarySwatch: Colors.blue
+        primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: LivrosPage(),
     );
   }
 }

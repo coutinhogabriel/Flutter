@@ -1,4 +1,4 @@
-import 'package:exemplo_json2/View/lista_lirvros_view.dart';
+import 'package:exemplo_json2/View/lista_livros_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {

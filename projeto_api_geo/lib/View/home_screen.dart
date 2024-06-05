@@ -62,6 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(height: 20),
                     _controller.weatherList.isEmpty
                     ? Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Text("Erro de Conexão"),
                           IconButton(

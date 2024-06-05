@@ -1,4 +1,6 @@
 import 'package:exemplo_firebase/firebase_options.dart';
+import 'package:exemplo_firebase/screens/home_screen.dart';
+import 'package:exemplo_firebase/screens/login_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -15,12 +17,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      home: const HomeScreen(),
+      debugShowCheckedModeBanner: false,
+      routes: {
+        '/login':(context) => const LoginScreen(),
+        '/regist':(context) => const HomeScreen(),
+      },
     );
   }
 }

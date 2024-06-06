@@ -1,6 +1,7 @@
 import 'package:exemplo_firebase/firebase_options.dart';
 import 'package:exemplo_firebase/screens/home_screen.dart';
 import 'package:exemplo_firebase/screens/login_screen.dart';
+import 'package:exemplo_firebase/screens/register_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -21,8 +22,9 @@ class MainApp extends StatelessWidget {
       home: const HomeScreen(),
       debugShowCheckedModeBanner: false,
       routes: {
+        'home' :(context) => const HomeScreen(),
         '/login':(context) => const LoginScreen(),
-        '/regist':(context) => const HomeScreen(),
+        '/register':(context) => const RegisterScreen(),
       },
     );
   }

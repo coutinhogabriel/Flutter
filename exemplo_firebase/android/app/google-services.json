@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "497680636222",
+    "project_id": "teste-firebase-noite12",
+    "storage_bucket": "teste-firebase-noite12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497680636222:android:7869ccd14a394d12bab46f",
+        "android_client_info": {
+          "package_name": "br.com.coutinho"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "497680636222-bnr234feufc59ksjbdo4fi1gifo919o6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB_2gAZuM4hNtEOMlg-CjkH5JZZ3X3kFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "497680636222-bnr234feufc59ksjbdo4fi1gifo919o6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

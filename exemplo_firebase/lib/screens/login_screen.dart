@@ -61,6 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Future<void> _acessarTodoList() async {
     User? user = await _loginUser();
     if (user != null) {
+      print("ok");
       Navigator.push(context,
           MaterialPageRoute(builder: (context) => TodolistScreen(user: user)));
     }else{

@@ -31,13 +31,29 @@
     "id":"1",
     "title":"The St. Louis Blues",
     "artist":"W. C. Handy",
-    "url":"http://www.dominiopublico.gov.br/download/som/gu10249.mp3"
+    "url":"http://www.dominiopublico.gov.br/download/som/gu10249.mp3",
+    "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgAa2YGdVXeMwChLqMEdzm27cP2-9BRWFghw&s"
 },
 {
   "id":"2",
   "title":"New York Blues",
   "artist":"Pietro Frosini",
-  "url":"http://www.dominiopublico.gov.br/download/som/gu10287.mp3"
+  "url":"http://www.dominiopublico.gov.br/download/som/gu10287.mp3",
+  "imageurl": "https://i.ytimg.com/vi/IE2HWkGDwCw/maxresdefault.jpg"
+},
+{
+  "id":"3",
+  "title":"Hino Nacional Brasileiro - Instrumental",
+  "artist":"Joaquim Osório Duque Estrada",
+  "url":"http://www.dominiopublico.gov.br/download/som/me000002.mp3",
+  "imageurl": "https://i.pinimg.com/736x/e4/03/c4/e403c4447a3bd8940459ae4f50856bed.jpg"
+},
+{
+  "id":"4",
+  "title":"Jingle Bells",
+  "artist":"John Pierpont",
+  "url":"http://www.dominiopublico.gov.br/download/som/gu10535.mp3",
+  "imageurl": "https://cdn.pixabay.com/photo/2017/11/07/20/43/christmas-tree-2928142_1280.jpg"
 }
 ]
 }

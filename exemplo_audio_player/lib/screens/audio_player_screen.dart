@@ -56,6 +56,13 @@ class _AudioPlayerScreenState extends State<AudioPlayerScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            //adicionar imagem url antes do icone
+            Image.network(
+              widget.audio.imageurl,
+              height: 500,
+              width: 500,
+              fit: BoxFit.cover,
+            ),
             IconButton(
               icon: Icon(_isPlaying? Icons.pause : Icons.play_arrow),
               iconSize: 64.0,

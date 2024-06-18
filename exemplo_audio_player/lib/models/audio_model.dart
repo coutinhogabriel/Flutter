@@ -3,8 +3,9 @@ class AudioModel {
   final String title;
   final String artist;
   final String url;
+  final String imageurl;
 
-  AudioModel({required this.title, required this.artist, required this.url});
+  AudioModel({required this.title, required this.artist, required this.url, required this.imageurl});
 
   //fromMap
   factory AudioModel.fromMap(Map<String, dynamic> map) {
@@ -12,6 +13,7 @@ class AudioModel {
       title: map['title'],
       artist: map['artist'],
       url: map['url'],
+      imageurl: map['imageurl'],
     );
   }
 }

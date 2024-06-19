@@ -1,21 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_api_geo/View/search_screen.dart';
+import 'package:projeto_api_geo/View/favorites_screen.dart'; 
+import 'package:projeto_api_geo/View/details_weather_screen.dart';
 import 'package:projeto_api_geo/View/home_screen.dart';
 
 void main() {
-  runApp(MyApp());
-
+  runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'projeto API GEO',
-      home:HomeScreen(),
+      title: "Project API GEO",
+      home: const HomeScreen(),
       debugShowCheckedModeBanner: false,
-      routes:{
-        
+      routes: {
+        '/search': (context) => const SearchScreen(),
+        '/favorites': (context) => FavoritesScreen(), 
       },
     );
   }

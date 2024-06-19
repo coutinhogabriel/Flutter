@@ -1,6 +1,4 @@
 import 'package:projeto_api_geo/Service/weather_service.dart';
-
-
 import '../Model/weather_model.dart';
 
 class WeatherController {

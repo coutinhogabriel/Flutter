@@ -55,30 +55,60 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             } else if (snapshot.hasError) {
               return Center(
-                child: Text('Erro ao carregar áudios: ${snapshot.error}'),
+                child: Text(
+                  'Erro ao carregar áudios: ${snapshot.error}',
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 16,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
               );
             } else if (_service.list.isEmpty) {
               return const Center(
-                child: Text('No Audio Found'),
+                child: Text(
+                  'No Audio Found',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.grey,
+                  ),
+                ),
               );
             } else {
               return ListView.builder(
                 itemCount: _service.list.length,
                 itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text(_service.list[index].title),
-                    subtitle: Text(_service.list[index].artist),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => AudioPlayerScreen(
-                            audioList: _service.list,
-                            initialIndex: index,
-                          ),
+                  return Card(
+                    elevation: 3,
+                    margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.audiotrack,
+                        color: Theme.of(context).primaryColor,
+                      ),
+                      title: Text(
+                        _service.list[index].title,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
                         ),
-                      );
-                    },
+                      ),
+                      subtitle: Text(_service.list[index].artist),
+                      trailing: Icon(
+                        Icons.play_arrow,
+                        color: Theme.of(context).primaryColor,
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AudioPlayerScreen(
+                              audioList: _service.list,
+                              initialIndex: index,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
                   );
                 },
               );
